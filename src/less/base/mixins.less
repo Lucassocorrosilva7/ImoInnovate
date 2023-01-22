@@ -1,0 +1,45 @@
+.phone(@rules) {
+    @media screen and (min-width: @sm) {
+        @rules();
+    }
+
+/*
+html.lt-ie9" é uma classe CSS que se aplica a versões antigas do navegador Internet 
+Explorer, para que possa ajustar estilos específicos para essas versões. Isso garante 
+a compatibilidade do seu site nessas versões antigas.
+*/
+
+    html.lt-ie9 & {
+        @rules();
+    }
+}
+
+.tablet(@rules) {
+    @media screen and (min-width: @md) {
+        @rules();
+    }
+ html.lt-ie9 & {
+     @rules();
+ }
+    
+}
+
+.desktop(@rules) {
+    @media screen and (min-width: @lg) {
+        @rules();
+    }
+
+         html.lt-ie9 & {
+             @rules();
+         }
+}
+
+.desktopxl(@rules) {
+    @media screen and (min-width: @xl) {
+        @rules();
+    }
+
+        html.lt-ie9 & {
+            @rules();
+        }
+}
