@@ -1,0 +1,73 @@
+.properties {
+    margin-top: 5rem;
+
+    .tablet({
+        margin-top: 10rem;
+    });
+
+&__heading {
+    .heading;
+}
+
+&__grid {
+    .grid(1, 2rem);
+
+    .tablet({
+        .grid(2, 2rem)
+    });
+
+    .desktop({
+        .grid(3, 2rem)
+    })
+}
+}
+
+.print-image(@i) when (@i > 0) {
+    &:nth-child(@{i}) &__image {
+        background-image: url("../../../public/images/propiedad_@{i}.jpg");
+    }
+
+    .print-image(@i - 1);
+}
+
+.property {
+    background-color: @white;
+
+    &__image {
+        aspect-ratio: 10 / 6;
+        background-size: cover;
+
+        position: relative;
+    }
+
+    .print-image(6);
+
+    &__name {
+        position: absolute;
+        bottom: 0;
+        color: @black;
+        font-size: 2.4rem;
+        background: rgba(255, 255, 255, 0.35);
+        backdrop-filter: blur(13.5px);
+        -webkit-backdrop-filter: blur(13.5px);
+        width: 100%;
+        padding: 1rem;
+    }
+
+    &__content{
+        padding: 2rem;
+    }
+
+    &__text{
+
+    }
+
+    &__price{
+        font-size: 3rem;
+    }
+
+    &__btn{
+        .button(@bg-primary, @white);
+        display: block;
+    }
+}
