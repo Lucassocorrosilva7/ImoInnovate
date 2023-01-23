@@ -3,7 +3,7 @@
         @rules();
     }
 
-/*
+    /*
 html.lt-ie9" é uma classe CSS que se aplica a versões antigas do navegador Internet 
 Explorer, para que possa ajustar estilos específicos para essas versões. Isso garante 
 a compatibilidade do seu site nessas versões antigas.
@@ -18,10 +18,11 @@ a compatibilidade do seu site nessas versões antigas.
     @media screen and (min-width: @md) {
         @rules();
     }
- html.lt-ie9 & {
-     @rules();
- }
-    
+
+    html.lt-ie9 & {
+        @rules();
+    }
+
 }
 
 .desktop(@rules) {
@@ -29,9 +30,9 @@ a compatibilidade do seu site nessas versões antigas.
         @rules();
     }
 
-         html.lt-ie9 & {
-             @rules();
-         }
+    html.lt-ie9 & {
+        @rules();
+    }
 }
 
 .desktopxl(@rules) {
@@ -39,7 +40,57 @@ a compatibilidade do seu site nessas versões antigas.
         @rules();
     }
 
-        html.lt-ie9 & {
-            @rules();
-        }
+    html.lt-ie9 & {
+        @rules();
+    }
 }
+
+.grid(@columns,@space){
+    display: grid;
+    grid-template-columns: repeat(@columns, 1fr);
+    gap: @space;
+}
+
+.button(@bgColor,@colorText){
+    background-color: @bgColor;
+    padding: 1.5rem 4rem;
+    color: @colorText;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 400;
+    display: inline-block;
+    font-weight: 700;
+    border: none;
+    transition: all background-color .3s;
+    text-align: center;
+
+    .tablet {
+        width: auto;
+    }
+
+    &:hover {
+        background-color: darken(@bgColor, 10%);
+    }
+}
+
+.heading {
+    font-weight: 400;
+
+    span {
+        font-weight: 700;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        height: 1rem;
+        width: 15rem;
+        margin-top: 1rem;
+        background-image: linear-gradient(
+        to right, @bg-primary 0%, @bg-primary 50%, 
+        lighten(@bg-primary, 20%) 50%,
+        lighten(@bg-primary, 20%) 100%
+         );
+    }
+}
+
