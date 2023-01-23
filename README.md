@@ -2,6 +2,8 @@
 ImoInnovate 🏢
 </h1>
 
+![ImoInnovate](./public/images/imo.png "ImoInnovate")
+
 ## Em desenvolvimento...
 
 ## ⚡ - Tecnologias utilizadas
