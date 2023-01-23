@@ -1,13 +1,17 @@
 .header {
-  background-image: linear-gradient(
-      to right,
+  background-image: linear-gradient(to right,
       fadeout(@bg-primary, 20%) 0%,
-      @bg-primary 100%
-    ),
+      @bg-primary 100%),
     url("../../../public/images/header_bg.jpg");
   background-size: cover;
   background-image: center;
   padding: 3rem 0;
+  position: relative;
+  
+.tablet({
+    padding: 3rem 0 20rem 0;
+  });
+
 
   &__nav {
     display: flex;
@@ -15,23 +19,74 @@
     align-items: center;
 
     .tablet({
-         flex-direction: row;
-         justify-content: space-between;
+      flex-direction: row;
+      justify-content: space-between;
     })
-  }
-
-  &__logo {
-    width: 25rem;
-  }
 }
 
-.navbar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+&__logo {
+  width: 25rem;
+}
 
-    .tablet({
-        flex-direction: row;
-        gap: 1rem;
+&__content {
+  .tablet({
+    margin-top: 10rem;
+    max-width: 50rem;
+  })
+}
+
+&__heading {
+  color: @white;
+  text-align: center;
+
+  .tablet({
+    text-align: left;
+  })
+}
+
+&__text {
+  color: @white;
+  display: none;
+
+  .tablet({
+    display: block;
+  })
+}
+
+&__image {
+  display: none;
+
+  .tablet({
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -5rem;
+    max-width: 35rem;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 5rem;
+  });
+
+    .desktopxl({
+      max-width: 60rem;
     })
+}
+
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  gap: 1rem;
+
+  &__link {
+    color: @white;
+    font-weight: bold;
+  }
+
+  .tablet({
+    flex-direction: row;
+    margin-top: 0;
+  })
 }
