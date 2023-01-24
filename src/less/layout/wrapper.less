@@ -1,0 +1,57 @@
+.wrapper {
+    margin-top: 5rem;
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, @bg-secondary 50%, @bg-secondary 100%),
+        url(../../../public/images/destaque.jpg);
+    background-size: 100%, cover;
+    background-position: center, -50rem -30rem;
+    background-repeat: no-repeat;
+
+    .tablet({
+        background-image: linear-gradient(to right, transparent 0%, transparent 50%, @bg-secondary 50%, @bg-secondary 100%),
+        url(../../../public/images/destaque.jpg);
+        background-position: center, -50rem, center;
+    });
+
+&__grid {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+
+    .tablet({
+        grid-template-rows: unset;
+        .grid(2, 2rem)
+    })
+}
+
+&__content {
+    padding: 5rem;
+    grid-row: 2 / 3;
+
+    .tablet({
+        padding: 10rem 5rem;
+        grid-column: 2 / 3;
+    })
+}
+
+&__heading {
+    color: @white;
+    text-transform: uppercase;
+}
+
+
+&__text {
+    color: @white;
+    font-size: 1.8rem;
+}
+
+&__price {
+    color: @white;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+&__link {
+    .button(@bg-primary, @white);
+    display: block;
+}
+
+}
