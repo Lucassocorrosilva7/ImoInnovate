@@ -2,7 +2,7 @@
 ImoInnovate 🏢
 </h1>
 
-![ImoInnovate](./public/images/imo.png "ImoInnovate")
+![ImoInnovate](./public/images/imo.PNG "ImoInnovate")
 
 ## Em desenvolvimento...
 
