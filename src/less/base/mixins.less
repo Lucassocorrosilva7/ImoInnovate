@@ -2,13 +2,6 @@
     @media screen and (min-width: @sm) {
         @rules();
     }
-
-    /*
-html.lt-ie9" é uma classe CSS que se aplica a versões antigas do navegador Internet 
-Explorer, para que possa ajustar estilos específicos para essas versões. Isso garante 
-a compatibilidade do seu site nessas versões antigas.
-*/
-
     html.lt-ie9 & {
         @rules();
     }
@@ -73,11 +66,12 @@ a compatibilidade do seu site nessas versões antigas.
     }
 }
 
-.heading {
-    font-weight: 400;
 
+.heading(@dis) {
+    font-weight: 400;
     span {
         font-weight: 700;
+        display: @dis;
     }
 
     &::after {
