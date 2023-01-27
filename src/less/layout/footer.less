@@ -1,0 +1,52 @@
+.footer {
+    background-color: @bg-primary;
+    margin: 5rem 0 0 0;
+    padding: 5rem 0 0 0;
+    &__grid{
+        .tablet({
+            .grid(3,1rem);
+            
+        })
+    }
+
+    &__heading{
+        color: @white;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    &__text{
+        color: @white;
+    }
+
+    &__logo{
+        width: 20rem;
+        margin-top: 2rem;
+        .tablet({
+            margin-top: 0;
+        })
+    }
+
+    &__navbar{
+        display: flex;
+        align-items: flex-start;  
+        flex-direction: column;     
+    }
+
+    &__link{
+        color: @white;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+
+    &__copyright{
+        background-color: darken(@bg-primary, 10%);
+        text-align: center;
+        padding: 1rem;
+        color: @white;
+        margin: 5rem 0 0 0;
+    }
+}
