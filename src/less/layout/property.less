@@ -6,7 +6,7 @@
     });
 
 &__heading {
-    .heading;
+    .heading(inline-block);
 }
 
 &__grid {
@@ -24,9 +24,8 @@
 
 .print-image(@i) when (@i > 0) {
     &:nth-child(@{i}) &__image {
-        background-image: url("../../../public/images/propriedade_@{i}.jpg");
+        background-image: url("/build/images/propriedade_@{i}.webp");
     }
-
     .print-image(@i - 1);
 }
 
@@ -34,9 +33,8 @@
     background-color: @white;
 
     &__image {
-        aspect-ratio: 10 / 6;
+        height: 25rem;
         background-size: cover;
-
         position: relative;
     }
 

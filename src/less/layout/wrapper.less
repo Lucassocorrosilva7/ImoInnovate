@@ -1,15 +1,15 @@
 .wrapper {
     margin-top: 5rem;
     background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, @bg-secondary 50%, @bg-secondary 100%),
-        url(../../../public/images/destaque.jpg);
+        url(/build/images/destaque.webp);
     background-size: 100%, cover;
-    background-position: center, -50rem -30rem;
+    background-position: center, center;
     background-repeat: no-repeat;
 
     .tablet({
         background-image: linear-gradient(to right, transparent 0%, transparent 50%, @bg-secondary 50%, @bg-secondary 100%),
-        url(../../../public/images/destaque.jpg);
-        background-position: center, -50rem, center;
+        url(/build/images/destaque.webp);
+        background-position: center, -40rem, center;
     });
 
 &__grid {
